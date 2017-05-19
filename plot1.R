@@ -19,5 +19,5 @@ library(sqldf)
  	 ucidata<- read.csv.sql("./data/household_power_consumption.txt", sql = "select * from file where Date in ('1/2/2007','2/2/2007')", header = TRUE, sep = ";")
 
 	png(file="plot1.png")
-	hist(power1$Global_active_power, xlab= "Global Active Power (kilowatts)", col="red", main="Global Active Power")
+	hist(ucidata$Global_active_power, xlab= "Global Active Power (kilowatts)", col="red", main="Global Active Power")
 	dev.off()
